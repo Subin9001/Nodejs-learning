@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin: 24px 0;
+}
+
+.homes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.home-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-card h2 {
+  margin-top: 0;
+  color: #d9485f;
+}
+
+.home-card p {
+  margin: 10px 0;
+}
+
+.homes-container .home-card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease;
+}
+
+#btn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#btn1 {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#btn2 {
+  background-color: yellowgreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav {
+  background-color: #1565c0;
+  padding: 16px 8%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #1565c0;
+}

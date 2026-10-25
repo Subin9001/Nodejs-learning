@@ -1,0 +1,25 @@
+
+<%- include('../partials/head') %>
+
+<body>
+  <main class="container">
+    <%- include('../partials/nav') %>
+
+    <h1>welcome to host page !</h1>
+
+    <section class="homes-container">
+      <% registeredHomes.forEach(home => { %>
+        <article class="home-card">
+          <h2><%= home.houseName %></h2>
+          <p><strong>Price:</strong> Rs. <%= home.price %></p>
+          <p><strong>Location:</strong> <%= home.location %></p>
+          <p><strong>Rating:</strong> <%= home.rating %>/5</p>
+           <button id="btn1">edit</button>
+           <button id="btn2">delete</button>
+        </article>
+      <% }) %>
+    </section>
+   
+  </main>
+</body>
+</html>

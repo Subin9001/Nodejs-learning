@@ -35,7 +35,7 @@ const userRequestHandler = (req, res) => {
 </html>
       `);
     res.write("<body><h1>Enter your details:</h1>");
-    res.write('<form action = "/submit-details" method = "POST">');
+    res.write('<form action = "/registers" method = "POST">');
     res.write('<label for="name">Name:</label>');
     res.write(
       '<input type="text" id="name" name="name" placeholder="Enter your name"><br><br>',
@@ -61,10 +61,7 @@ const userRequestHandler = (req, res) => {
     res.write('<input type="submit" value="Submit">');
     res.write("</form>");
     return res.end();
-  } else if (
-    req.url.toLowerCase() === "/submit-details" &&
-    req.method === "POST"
-  ) {
+  } else if (req.url.toLowerCase() === "/registers" && req.method === "POST") {
     return sumRequestHandler(req, res);
   } else if (req.url === "/success" && req.method === "GET") {
     res.write("<h1>successfully registered</h1>");

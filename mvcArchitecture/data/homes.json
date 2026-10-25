@@ -1,0 +1,14 @@
+[
+  {
+    "houseName": "GaurNitai",
+    "price": "1000",
+    "location": "mayapur",
+    "rating": "5"
+  },
+  {
+    "houseName": "radheshyam",
+    "price": "1200",
+    "location": "vrndavan",
+    "rating": "4"
+  }
+]

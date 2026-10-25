@@ -18,10 +18,35 @@ const sumRequestHandler = (req, res) => {
     //OR
     const bodyObject = Object.fromEntries(params);
     console.log(bodyObject);
-    fs.writeFileSync("students.txt", JSON.stringify(bodyObject));
+
+    let students = [];
+
+    if (fs.existsSync("students.txt")) {
+      const existingData = fs.readFileSync("students.txt", "utf8");
+
+      if (existingData) {
+        students = JSON.parse(existingData);
+      }
+    }
+
+    // Add new student
+    students.push(bodyObject);
+
+    // Save all students
+    fs.writeFile("students.txt", JSON.stringify(students, null, 2), (error) => {
+      if (error) {
+        console.log("Error writing file:", error);
+        return;
+      }
+
+      console.log("File written successfully");
+    });
+
+    // Redirect after saving
+    res.statusCode = 302;
+    res.setHeader("Location", "/success");
+    return res.end();
+    // fs.writeFileSync("students.txt", JSON.stringify(bodyObject));
   });
-  res.statusCode = 302;
-  res.setHeader("Location", "/success");
-  return res.end();
 };
 exports.sumRequestHandler = sumRequestHandler;

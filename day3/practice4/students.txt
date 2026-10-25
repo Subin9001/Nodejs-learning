@@ -1,1 +1,25 @@
-{"name":"Gaur Nitai","age":"24","course":"english","gender":"male"}
+[
+  {
+    "name": "Gaur Nitai",
+    "age": "22",
+    "course": "hindi"
+  },
+  {
+    "name": "Gaur Nitai",
+    "age": "22",
+    "course": "hindi",
+    "gender": "male"
+  },
+  {
+    "name": "sita Rama",
+    "age": "22",
+    "course": "english",
+    "gender": "male"
+  },
+  {
+    "name": "Radhe Shyam",
+    "age": "22",
+    "course": "english",
+    "gender": "male"
+  }
+]
